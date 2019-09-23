@@ -1,0 +1,10 @@
+function c = contraste(img) 
+[m,n] = size(img);
+me = mean2(img);
+p = imhist(img).';
+p = p/(m*n); 
+dif = 0:255;
+dif = dif - me;
+dif = dif.*dif;
+dif = dif.*p;
+c = sqrt(sum(dif));

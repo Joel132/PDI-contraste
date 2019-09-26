@@ -36,14 +36,15 @@ f(RL2+1)=HiPrima(HL2,RL2);
 f(RU1+1)=HiPrima(HU1,RU1);
 f(RU2+1)=HiPrima(HU2,RU2);
 
-m1=m;
-for r=1:M
-    for c=1:N
-        m1(r,c)=f(m(r,c)+1);
-    end
-end
+m1=uint8(f(double(m)+1));
+% m1=f;
+% for r=1:M
+%     for c=1:N
+%         m1(r,c)=f(m(r,c)+1);
+%     end
+% end
 
-imshow(m), figure, imshow(m1)
+%imshow(m), figure, imshow(m1)
 
 
 
